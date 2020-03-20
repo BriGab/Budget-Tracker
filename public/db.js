@@ -15,9 +15,9 @@ request.onsuccess = function(event) {
    db = event.target.result;
    console.log(db)
 
-//    if (navigator.onLine) {
-//        checkDatabase();
-//    }
+   if (navigator.onLine) {
+       checkDatabase();
+   }
 };
 
 request.onerror = function(event) {
@@ -27,8 +27,8 @@ request.onerror = function(event) {
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
 
-    const store = transaction.createObjectStore("pending");
-
+    const store = transaction.objectStore("pending");
+    console.log(record)
     store.add(record)
 }
 
@@ -38,6 +38,8 @@ function checkDatabase() {
     const store = transaction.objectStore("pending");
 
     const getAll = store.getAll();
+
+    console.log(getAll)
 
     getAll.onsucces = function() {
         if (getAll.result.length > 0) {
