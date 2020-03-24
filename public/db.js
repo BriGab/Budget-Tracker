@@ -1,3 +1,5 @@
+console.log("LOADED db.js")
+
 let db;
 
 const request = indexedDB.open("budget", 1);

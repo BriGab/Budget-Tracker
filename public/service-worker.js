@@ -1,4 +1,4 @@
-const FILES_TO_CACHE = ["/","/index.html", "/dist/home.bundle.js","/dist/db.bundle.js", "/dist/manifest.json"];
+const FILES_TO_CACHE = ["/","/index.html", "/db.js","/dist/home.bundle.js", "/dist/manifest.json"];
 
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v3";
